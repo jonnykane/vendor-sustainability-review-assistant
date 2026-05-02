@@ -1,0 +1,267 @@
+{
+  "run_id": "2026-05-02_v0-naive-longcontext_claude-sonnet-4-6",
+  "pipeline_version": "v0-naive-longcontext",
+  "model": "claude-sonnet-4-6",
+  "prompt_version": "v1",
+  "rubric_version": "1.0",
+  "golden_set": "Golden set v1.0 \u2014 5 vendors",
+  "n_vendors": 5,
+  "n_dimension_comparisons": 25,
+  "overall": {
+    "n": 25,
+    "exact_match_rate": 0.6,
+    "within_one_rate": 1.0,
+    "mae": 0.4,
+    "directional_bias": 0.32,
+    "unsupported_claim_rate": 0.0,
+    "hallucinated_zero_rate": 0.0,
+    "evidence_present_when_scored": 1.0
+  },
+  "by_dimension": {
+    "1": {
+      "name": "Net Zero commitment and transition plan",
+      "n": 5,
+      "exact_match_rate": 0.8,
+      "within_one_rate": 1.0,
+      "mae": 0.2,
+      "directional_bias": 0.2,
+      "unsupported_claim_rate": 0.0,
+      "hallucinated_zero_rate": 0.0,
+      "evidence_present_when_scored": 1.0
+    },
+    "2": {
+      "name": "Scope 1 & 2 emissions disclosure",
+      "n": 5,
+      "exact_match_rate": 0.4,
+      "within_one_rate": 1.0,
+      "mae": 0.6,
+      "directional_bias": 0.6,
+      "unsupported_claim_rate": 0.0,
+      "hallucinated_zero_rate": 0.0,
+      "evidence_present_when_scored": 1.0
+    },
+    "3": {
+      "name": "Scope 3 emissions disclosure",
+      "n": 5,
+      "exact_match_rate": 0.4,
+      "within_one_rate": 1.0,
+      "mae": 0.6,
+      "directional_bias": 0.6,
+      "unsupported_claim_rate": 0.0,
+      "hallucinated_zero_rate": 0.0,
+      "evidence_present_when_scored": 1.0
+    },
+    "4": {
+      "name": "Third-party verification and assurance",
+      "n": 5,
+      "exact_match_rate": 0.8,
+      "within_one_rate": 1.0,
+      "mae": 0.2,
+      "directional_bias": -0.2,
+      "unsupported_claim_rate": 0.0,
+      "hallucinated_zero_rate": 0.0,
+      "evidence_present_when_scored": 1.0
+    },
+    "5": {
+      "name": "Science-based targets validation",
+      "n": 5,
+      "exact_match_rate": 0.6,
+      "within_one_rate": 1.0,
+      "mae": 0.4,
+      "directional_bias": 0.4,
+      "unsupported_claim_rate": 0.0,
+      "hallucinated_zero_rate": 0.0,
+      "evidence_present_when_scored": 1.0
+    }
+  },
+  "by_vendor": {
+    "archive_ni": {
+      "n": 5,
+      "exact_match_rate": 0.4,
+      "within_one_rate": 1.0,
+      "mae": 0.6,
+      "directional_bias": 0.2,
+      "unsupported_claim_rate": 0.0,
+      "hallucinated_zero_rate": 0.0,
+      "evidence_present_when_scored": 1.0
+    },
+    "boxvault": {
+      "n": 5,
+      "exact_match_rate": 0.6,
+      "within_one_rate": 1.0,
+      "mae": 0.4,
+      "directional_bias": 0.4,
+      "unsupported_claim_rate": 0.0,
+      "hallucinated_zero_rate": 0.0,
+      "evidence_present_when_scored": 1.0
+    },
+    "heritage": {
+      "n": 5,
+      "exact_match_rate": 0.8,
+      "within_one_rate": 1.0,
+      "mae": 0.2,
+      "directional_bias": 0.2,
+      "unsupported_claim_rate": 0.0,
+      "hallucinated_zero_rate": 0.0,
+      "evidence_present_when_scored": 1.0
+    },
+    "microsoft": {
+      "n": 5,
+      "exact_match_rate": 0.6,
+      "within_one_rate": 1.0,
+      "mae": 0.4,
+      "directional_bias": 0.4,
+      "unsupported_claim_rate": 0.0,
+      "hallucinated_zero_rate": 0.0,
+      "evidence_present_when_scored": 1.0
+    },
+    "sentinel_records": {
+      "n": 5,
+      "exact_match_rate": 0.6,
+      "within_one_rate": 1.0,
+      "mae": 0.4,
+      "directional_bias": 0.4,
+      "unsupported_claim_rate": 0.0,
+      "hallucinated_zero_rate": 0.0,
+      "evidence_present_when_scored": 1.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      4,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      4,
+      4,
+      0
+    ],
+    [
+      0,
+      0,
+      4,
+      4
+    ],
+    [
+      0,
+      0,
+      0,
+      3
+    ]
+  ],
+  "worst_cases": [
+    {
+      "vendor_id": "microsoft",
+      "dimension_id": 2,
+      "dimension_name": "Scope 1 & 2 emissions disclosure",
+      "truth_score": 2,
+      "model_score": 3,
+      "absolute_error": 1,
+      "signed_error": 1,
+      "unsupported_claim": false,
+      "hallucinated_zero": false
+    },
+    {
+      "vendor_id": "microsoft",
+      "dimension_id": 3,
+      "dimension_name": "Scope 3 emissions disclosure",
+      "truth_score": 2,
+      "model_score": 3,
+      "absolute_error": 1,
+      "signed_error": 1,
+      "unsupported_claim": false,
+      "hallucinated_zero": false
+    },
+    {
+      "vendor_id": "sentinel_records",
+      "dimension_id": 3,
+      "dimension_name": "Scope 3 emissions disclosure",
+      "truth_score": 2,
+      "model_score": 3,
+      "absolute_error": 1,
+      "signed_error": 1,
+      "unsupported_claim": false,
+      "hallucinated_zero": false
+    },
+    {
+      "vendor_id": "sentinel_records",
+      "dimension_id": 5,
+      "dimension_name": "Science-based targets validation",
+      "truth_score": 2,
+      "model_score": 3,
+      "absolute_error": 1,
+      "signed_error": 1,
+      "unsupported_claim": false,
+      "hallucinated_zero": false
+    },
+    {
+      "vendor_id": "archive_ni",
+      "dimension_id": 2,
+      "dimension_name": "Scope 1 & 2 emissions disclosure",
+      "truth_score": 1,
+      "model_score": 2,
+      "absolute_error": 1,
+      "signed_error": 1,
+      "unsupported_claim": false,
+      "hallucinated_zero": false
+    },
+    {
+      "vendor_id": "archive_ni",
+      "dimension_id": 3,
+      "dimension_name": "Scope 3 emissions disclosure",
+      "truth_score": 1,
+      "model_score": 2,
+      "absolute_error": 1,
+      "signed_error": 1,
+      "unsupported_claim": false,
+      "hallucinated_zero": false
+    },
+    {
+      "vendor_id": "archive_ni",
+      "dimension_id": 4,
+      "dimension_name": "Third-party verification and assurance",
+      "truth_score": 1,
+      "model_score": 0,
+      "absolute_error": 1,
+      "signed_error": -1,
+      "unsupported_claim": false,
+      "hallucinated_zero": false
+    },
+    {
+      "vendor_id": "boxvault",
+      "dimension_id": 2,
+      "dimension_name": "Scope 1 & 2 emissions disclosure",
+      "truth_score": 1,
+      "model_score": 2,
+      "absolute_error": 1,
+      "signed_error": 1,
+      "unsupported_claim": false,
+      "hallucinated_zero": false
+    },
+    {
+      "vendor_id": "boxvault",
+      "dimension_id": 5,
+      "dimension_name": "Science-based targets validation",
+      "truth_score": 1,
+      "model_score": 2,
+      "absolute_error": 1,
+      "signed_error": 1,
+      "unsupported_claim": false,
+      "hallucinated_zero": false
+    },
+    {
+      "vendor_id": "heritage",
+      "dimension_id": 1,
+      "dimension_name": "Net Zero commitment and transition plan",
+      "truth_score": 0,
+      "model_score": 1,
+      "absolute_error": 1,
+      "signed_error": 1,
+      "unsupported_claim": false,
+      "hallucinated_zero": false
+    }
+  ]
+}

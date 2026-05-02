@@ -41,7 +41,7 @@ SUPPORTED_EXTENSIONS = {".pdf", ".html", ".htm"}
 
 def _find_document(vendor_dir: Path) -> Path | None:
     for ext in SUPPORTED_EXTENSIONS:
-        matches = list(vendor_dir.glob(f"*{ext}"))
+        matches = sorted(vendor_dir.glob(f"*{ext}"))
         if matches:
             return matches[0]
     return None

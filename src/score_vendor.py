@@ -37,7 +37,7 @@ except ImportError:
     BeautifulSoup = None  # type: ignore[assignment]
 
 
-DEFAULT_MODEL = "claude-opus-4-7"
+DEFAULT_MODEL = "claude-sonnet-4-6"
 PIPELINE_VERSION = "v0-naive-longcontext"
 PROMPT_VERSION = "v1"
 
