@@ -107,6 +107,10 @@ def _scorecard_to_dict(card: VendorScorecard) -> dict:
     }
 
 
+def save_scorecard(card: VendorScorecard, path: Path | str) -> None:
+    Path(path).write_text(json.dumps(_scorecard_to_dict(card), indent=2))
+
+
 def save_golden_set(golden: GoldenSet, path: Path | str) -> None:
     data = {
         "name": golden.name,

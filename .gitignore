@@ -149,3 +149,7 @@ cython_debug/
 # OS
 .DS_Store
 Thumbs.db
+
+# Generated run outputs and per-vendor scores (keep .gitkeep)
+runs/*.json
+scores/*.json
