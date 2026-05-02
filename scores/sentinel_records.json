@@ -1,0 +1,58 @@
+{
+  "vendor_id": "sentinel_records",
+  "vendor_name": "Sentinel Records Ltd",
+  "document_filename": "sentinel_records_sustainability_report_2024.pdf",
+  "document_type": "sustainability_report",
+  "reporting_period": "CY2024",
+  "total_score": 12,
+  "max_score": 15,
+  "scores": [
+    {
+      "dimension_id": 1,
+      "dimension_name": "Net Zero commitment and transition plan",
+      "score": 3,
+      "evidence_quote": "committed to achieving Net Zero greenhouse gas emissions across our value chain by 2045",
+      "evidence_location": "p.3, Section 1 Net Zero Commitment and Transition Plan",
+      "confidence": "high",
+      "scoring_rationale": "The report gives a Net Zero target year of 2045, a 2019 baseline, interim 2030 targets for Scope 1, 2 and material Scope 3, and states that progress is reported annually. It also outlines transition levers and committed decarbonisation capex, supporting a score of 3."
+    },
+    {
+      "dimension_id": 2,
+      "dimension_name": "Scope 1 & 2 emissions disclosure",
+      "score": 3,
+      "evidence_quote": "We disclose both location-based and market-based Scope 2 emissions",
+      "evidence_location": "p.4, Section 2 Scope 1 and Scope 2 Emissions",
+      "confidence": "high",
+      "scoring_rationale": "The report states GHG Protocol reporting, operational control boundary, factors used, and discloses both location-based and market-based Scope 2. It provides 2019, 2022, 2023 and 2024 data showing an absolute market-based Scope 1 and 2 reduction trend, supporting a score of 3."
+    },
+    {
+      "dimension_id": 3,
+      "dimension_name": "Scope 3 emissions disclosure",
+      "score": 2,
+      "evidence_quote": "7 are reported as material to Sentinel Records",
+      "evidence_location": "p.5, Section 3 Scope 3 Emissions",
+      "confidence": "medium",
+      "scoring_rationale": "The report discloses all categories deemed material under a materiality assessment and explains why other categories are excluded. Supplier engagement is evidenced, but the report does not demonstrate that the supplier programme is already reducing Scope 3 emissions; Scope 3 is stated as behind trajectory, so score 2 rather than 3."
+    },
+    {
+      "dimension_id": 4,
+      "dimension_name": "Third-party verification and assurance",
+      "score": 2,
+      "evidence_quote": "subject to limited assurance by Brackenbury Verification Services Ltd",
+      "evidence_location": "p.6, Section 4 Independent Assurance",
+      "confidence": "high",
+      "scoring_rationale": "The report identifies an external assurance provider and states limited assurance under ISAE 3000 and ISAE 3410 for Scope 1, Scope 2 and selected Scope 3 categories. It does not claim reasonable assurance or coverage of all material Scope 3, so score 2."
+    },
+    {
+      "dimension_id": 5,
+      "dimension_name": "Science-based targets validation",
+      "score": 2,
+      "evidence_quote": "near-term, validated November 2023",
+      "evidence_location": "p.3, Section 1.1 Targets",
+      "confidence": "high",
+      "scoring_rationale": "The report explicitly states that near-term targets were validated by SBTi and shows targets covering Scope 1, 2 and material Scope 3. Long-term Net Zero validation is still under review, so this does not meet the score 3 threshold."
+    }
+  ],
+  "overall_notes": "Disclosure quality is generally strong, with quantified emissions data, a clear 2019 baseline, interim targets, transition levers and external limited assurance. The main conservative scoring constraints are that Scope 3 supplier engagement has not yet evidenced actual emissions reductions, and long-term Net Zero target validation by SBTi is still under review. Renewable electricity is REGO-backed, which is weaker than direct PPAs or on-site generation, but this does not materially change the Scope 1 and 2 disclosure score.",
+  "evidence_quality_flag": "strong"
+}

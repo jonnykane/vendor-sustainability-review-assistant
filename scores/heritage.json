@@ -1,0 +1,58 @@
+{
+  "vendor_id": "heritage",
+  "vendor_name": "Heritage Document Services Ltd.",
+  "document_filename": "heritage_document_services.html",
+  "document_type": "web_statement",
+  "reporting_period": "2023",
+  "total_score": 0,
+  "max_score": 15,
+  "scores": [
+    {
+      "dimension_id": 1,
+      "dimension_name": "Net Zero commitment and transition plan",
+      "score": 0,
+      "evidence_quote": "",
+      "evidence_location": "no evidence found",
+      "confidence": "high",
+      "scoring_rationale": "The statement expresses support for a low-carbon economy but contains no dated Net Zero commitment, baseline year, transition plan, or interim target. Carbon footprint reduction language is generic and not sufficient for a Net Zero score."
+    },
+    {
+      "dimension_id": 2,
+      "dimension_name": "Scope 1 & 2 emissions disclosure",
+      "score": 0,
+      "evidence_quote": "",
+      "evidence_location": "no evidence found",
+      "confidence": "high",
+      "scoring_rationale": "No Scope 1 or Scope 2 emissions figures are disclosed. There is also no GHG Protocol methodology, organisational boundary, or location-based/market-based Scope 2 reporting."
+    },
+    {
+      "dimension_id": 3,
+      "dimension_name": "Scope 3 emissions disclosure",
+      "score": 0,
+      "evidence_quote": "",
+      "evidence_location": "no evidence found",
+      "confidence": "high",
+      "scoring_rationale": "No Scope 3 emissions inventory, categories, or materiality assessment are disclosed. A general reference to working with suppliers is not enough to evidence Scope 3 disclosure."
+    },
+    {
+      "dimension_id": 4,
+      "dimension_name": "Third-party verification and assurance",
+      "score": 0,
+      "evidence_quote": "",
+      "evidence_location": "no evidence found",
+      "confidence": "high",
+      "scoring_rationale": "The document contains no evidence of third-party assurance, assurance provider, assurance standard, or verified emissions boundary. It is a self-reported web statement only."
+    },
+    {
+      "dimension_id": 5,
+      "dimension_name": "Science-based targets validation",
+      "score": 0,
+      "evidence_quote": "",
+      "evidence_location": "no evidence found",
+      "confidence": "high",
+      "scoring_rationale": "No quantified emissions reduction targets are disclosed, and there is no evidence of SBTi validation. The document does not claim science-based targets."
+    }
+  ],
+  "overall_notes": "Disclosure quality is weak: the document is a short web statement with broad environmental commitments but no quantitative emissions data, targets, methodology, baseline, assurance, or SBTi validation. The only scored evidence is a limited set of operational practices such as recycling, energy-efficient lighting, staff practices, and supplier improvement discussions; these do not materially support the rubric dimensions.",
+  "evidence_quality_flag": "weak"
+}
