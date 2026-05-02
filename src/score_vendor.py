@@ -17,6 +17,7 @@ from datetime import date
 from pathlib import Path
 from typing import NamedTuple
 
+import dataclasses
 import anthropic
 
 # Resolve eval-harness imports (directory has a hyphen so can't use normal import)
@@ -38,7 +39,7 @@ except ImportError:
 
 
 DEFAULT_MODEL = "claude-sonnet-4-6"
-PIPELINE_VERSION = "v0-naive-longcontext"
+PIPELINE_VERSION = "v1-agentic-secondpass"
 PROMPT_VERSION = "v1"
 
 
@@ -237,6 +238,295 @@ def _build_tool_schema() -> dict:
 
 
 # ---------------------------------------------------------------------------
+# Second-pass targeted checks
+# ---------------------------------------------------------------------------
+
+class _SecondPassResult(NamedTuple):
+    scorecard: VendorScorecard
+    input_tokens: int
+    output_tokens: int
+
+
+_CHECK_SYSTEM = (
+    "You are a strict sustainability disclosure auditor. "
+    "Answer only based on what is explicitly stated in the document. "
+    "Do not infer or assume — if the document does not explicitly state something, "
+    "the answer is False."
+)
+
+
+def _run_check(
+    client: anthropic.Anthropic,
+    model: str,
+    document_text: str,
+    tool_name: str,
+    tool_description: str,
+    tool_schema: dict,
+    question: str,
+) -> tuple[dict, int, int]:
+    """Run one targeted yes/no check. Returns (tool_inputs, in_tokens, out_tokens)."""
+    response = client.messages.create(
+        model=model,
+        max_tokens=512,
+        system=_CHECK_SYSTEM,
+        tools=[{
+            "name": tool_name,
+            "description": tool_description,
+            "input_schema": tool_schema,
+        }],
+        tool_choice={"type": "tool", "name": tool_name},
+        messages=[{
+            "role": "user",
+            "content": [
+                {
+                    "type": "text",
+                    "text": document_text,
+                    "cache_control": {"type": "ephemeral"},
+                },
+                {
+                    "type": "text",
+                    "text": question,
+                },
+            ],
+        }],
+    )
+    tool_block = next(b for b in response.content if b.type == "tool_use")
+    return tool_block.input, response.usage.input_tokens, response.usage.output_tokens
+
+
+def _check_dim2(
+    document_text: str,
+    client: anthropic.Anthropic,
+    model: str,
+) -> tuple[bool, bool, int, int]:
+    """
+    Check two strict conditions for Dimension 2 (Scope 1 & 2).
+    Returns (has_reduction_trend, has_both_scope2_types, in_tokens, out_tokens).
+    has_reduction_trend required for score 3; has_both_scope2_types required for score 2.
+    """
+    inputs, in_toks, out_toks = _run_check(
+        client, model, document_text,
+        tool_name="check_scope_1_2",
+        tool_description="Check two strict conditions for Scope 1 & 2 emissions scoring.",
+        tool_schema={
+            "type": "object",
+            "properties": {
+                "has_multi_year_reduction_trend": {
+                    "type": "boolean",
+                    "description": (
+                        "True only if the document shows an absolute downward trend in "
+                        "Scope 1 and/or Scope 2 emissions across at least two consecutive "
+                        "years. Disclosing data without a reduction is False. "
+                        "Having a reduction target is False."
+                    ),
+                },
+                "trend_evidence": {
+                    "type": "string",
+                    "description": "The specific figures or passage supporting your answer, max 30 words.",
+                },
+                "has_both_scope2_types": {
+                    "type": "boolean",
+                    "description": (
+                        "True only if the document explicitly reports BOTH "
+                        "location-based AND market-based Scope 2 figures."
+                    ),
+                },
+                "scope2_evidence": {
+                    "type": "string",
+                    "description": "The passage showing both Scope 2 types, max 30 words. 'Not found' if False.",
+                },
+            },
+            "required": [
+                "has_multi_year_reduction_trend",
+                "trend_evidence",
+                "has_both_scope2_types",
+                "scope2_evidence",
+            ],
+        },
+        question=(
+            "Check two strict conditions about Scope 1 and Scope 2 emissions:\n\n"
+            "1. Is there an absolute MULTI-YEAR REDUCTION TREND in Scope 1 and/or "
+            "Scope 2 emissions? This requires actual falling numbers across at least "
+            "two consecutive years. Merely disclosing data, having a reduction target, "
+            "or showing year-on-year data without a reduction does NOT qualify.\n\n"
+            "2. Are BOTH location-based AND market-based Scope 2 emissions figures "
+            "explicitly reported?"
+        ),
+    )
+    return (
+        inputs["has_multi_year_reduction_trend"],
+        inputs["has_both_scope2_types"],
+        in_toks,
+        out_toks,
+    )
+
+
+def _check_dim3(
+    document_text: str,
+    client: anthropic.Anthropic,
+    model: str,
+) -> tuple[bool, int, int]:
+    """
+    Check Dimension 3: whether Scope 3 emissions are actually reducing (not just disclosed).
+    Returns (scope3_actually_reducing, in_tokens, out_tokens).
+    """
+    inputs, in_toks, out_toks = _run_check(
+        client, model, document_text,
+        tool_name="check_scope_3",
+        tool_description="Check whether Scope 3 emissions show a genuine reducing trend.",
+        tool_schema={
+            "type": "object",
+            "properties": {
+                "scope3_actually_reducing": {
+                    "type": "boolean",
+                    "description": (
+                        "True only if the document demonstrates a downward trend in "
+                        "reported Scope 3 emissions figures across at least two years. "
+                        "Disclosing Scope 3 figures, supplier engagement programmes, "
+                        "or stating a Scope 3 reduction target does NOT qualify."
+                    ),
+                },
+                "evidence": {
+                    "type": "string",
+                    "description": "The specific figures or passage supporting your answer, max 30 words.",
+                },
+            },
+            "required": ["scope3_actually_reducing", "evidence"],
+        },
+        question=(
+            "Does this document demonstrate that Scope 3 emissions are actually REDUCING? "
+            "This requires a demonstrated downward trend in reported Scope 3 figures "
+            "across at least two consecutive years. "
+            "Supplier engagement programmes, Scope 3 targets, or disclosing Scope 3 data "
+            "without a reduction trend does NOT count."
+        ),
+    )
+    return inputs["scope3_actually_reducing"], in_toks, out_toks
+
+
+def _check_dim5(
+    document_text: str,
+    client: anthropic.Anthropic,
+    model: str,
+) -> tuple[bool, int, int]:
+    """
+    Check Dimension 5: explicitly SBTi-validated vs merely SBTi-aligned.
+    Returns (sbti_explicitly_validated, in_tokens, out_tokens).
+    """
+    inputs, in_toks, out_toks = _run_check(
+        client, model, document_text,
+        tool_name="check_sbti_validation",
+        tool_description="Check whether targets are explicitly SBTi-validated, not merely aligned.",
+        tool_schema={
+            "type": "object",
+            "properties": {
+                "sbti_explicitly_validated": {
+                    "type": "boolean",
+                    "description": (
+                        "True only if the document explicitly states the company's targets "
+                        "have been validated or approved by SBTi. "
+                        "'SBTi-aligned', 'consistent with SBTi methodology', "
+                        "'using the SBTi framework', or 'committing to set SBTi targets' "
+                        "do NOT count — only explicit validation or approval counts."
+                    ),
+                },
+                "evidence": {
+                    "type": "string",
+                    "description": "The exact phrase supporting your answer, max 30 words.",
+                },
+            },
+            "required": ["sbti_explicitly_validated", "evidence"],
+        },
+        question=(
+            "Does this document explicitly state that the company's emissions reduction "
+            "targets have been VALIDATED or APPROVED by the Science Based Targets "
+            "initiative (SBTi)? Be strict: 'SBTi-aligned', 'consistent with SBTi', "
+            "'SBTi methodology', or a commitment to set SBTi targets does NOT qualify. "
+            "Only explicit validation or approval by SBTi counts."
+        ),
+    )
+    return inputs["sbti_explicitly_validated"], in_toks, out_toks
+
+
+def _apply_second_pass(
+    document_text: str,
+    scorecard: VendorScorecard,
+    client: anthropic.Anthropic,
+    model: str,
+) -> _SecondPassResult:
+    """
+    Run targeted follow-up checks on dimensions prone to over-scoring.
+    Caps scores where evidence doesn't meet the stricter bar.
+    """
+    score_map = {ds.dimension_id: ds for ds in scorecard.scores}
+    corrections: dict[int, tuple[int, str]] = {}  # dim_id → (new_score, rationale_suffix)
+    total_in = total_out = 0
+
+    # --- Dimension 2: Scope 1 & 2 ---
+    dim2 = score_map.get(2)
+    if dim2 and dim2.score >= 2:
+        has_trend, has_both_scope2, in_t, out_t = _check_dim2(document_text, client, model)
+        total_in += in_t
+        total_out += out_t
+        new_score = dim2.score
+        if new_score == 3 and not has_trend:
+            new_score = 2
+        if new_score >= 2 and not has_both_scope2:
+            new_score = 1
+        if new_score != dim2.score:
+            corrections[2] = (
+                new_score,
+                f"[Second-pass correction: {dim2.score}→{new_score}; "
+                f"reduction_trend={has_trend}, both_scope2_types={has_both_scope2}]",
+            )
+
+    # --- Dimension 3: Scope 3 ---
+    dim3 = score_map.get(3)
+    if dim3 and dim3.score >= 2:
+        scope3_reducing, in_t, out_t = _check_dim3(document_text, client, model)
+        total_in += in_t
+        total_out += out_t
+        if dim3.score == 3 and not scope3_reducing:
+            corrections[3] = (
+                2,
+                f"[Second-pass correction: 3→2; scope3_reducing={scope3_reducing}]",
+            )
+
+    # --- Dimension 5: SBTi ---
+    dim5 = score_map.get(5)
+    if dim5 and dim5.score == 2:
+        sbti_validated, in_t, out_t = _check_dim5(document_text, client, model)
+        total_in += in_t
+        total_out += out_t
+        if not sbti_validated:
+            corrections[5] = (
+                1,
+                "[Second-pass correction: 2→1; SBTi aligned/methodology only, not validated]",
+            )
+
+    if corrections:
+        for dim_id, (new_score, reason) in corrections.items():
+            print(f"  [second-pass] dim{dim_id}: {reason}")
+
+    new_scores = [
+        dataclasses.replace(
+            ds,
+            score=corrections[ds.dimension_id][0],
+            scoring_rationale=ds.scoring_rationale + " " + corrections[ds.dimension_id][1],
+        )
+        if ds.dimension_id in corrections
+        else ds
+        for ds in scorecard.scores
+    ]
+
+    return _SecondPassResult(
+        scorecard=dataclasses.replace(scorecard, scores=new_scores) if corrections else scorecard,
+        input_tokens=total_in,
+        output_tokens=total_out,
+    )
+
+
+# ---------------------------------------------------------------------------
 # Scoring
 # ---------------------------------------------------------------------------
 
@@ -320,10 +610,12 @@ def _score_full(
         rubric_version=RUBRIC_VERSION,
     )
 
+    second = _apply_second_pass(document_text, scorecard, client, model)
+
     return ScoringResult(
-        scorecard=scorecard,
-        input_tokens=response.usage.input_tokens,
-        output_tokens=response.usage.output_tokens,
+        scorecard=second.scorecard,
+        input_tokens=response.usage.input_tokens + second.input_tokens,
+        output_tokens=response.usage.output_tokens + second.output_tokens,
         duration_seconds=round(time.perf_counter() - t0, 2),
     )
 
