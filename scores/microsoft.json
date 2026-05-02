@@ -1,58 +1,62 @@
 {
   "vendor_id": "microsoft",
-  "vendor_name": "Microsoft Corporation",
+  "vendor_name": "Microsoft",
   "document_filename": "2025-Microsoft-Environmental-Sustainability-Report.pdf",
   "document_type": "sustainability_report",
   "reporting_period": "FY2024",
-  "total_score": 10,
+  "total_score": 12,
   "max_score": 15,
+  "scorer": "claude-sonnet-4-6",
+  "scoring_date": "2026-05-02",
+  "rubric_version": "1.0",
+  "schema_version": "1.0",
+  "evidence_quality_flag": "strong",
+  "overall_notes": "Microsoft's 2025 Environmental Sustainability Report (covering FY2024) is a comprehensive and detailed disclosure with strong evidence across carbon, water, waste, and ecosystem dimensions. Scope 1, 2, and 3 emissions are quantified with multi-year trend data and independently reviewed by Deloitte & Touche LLP, and the net-zero/carbon-negative commitment is underpinned by specific 2030 milestones, a named decarbonisation pathway, and board-level governance. The principal gap is the absence of SBTi-validated or SBTi-committed targets for Microsoft's own operations, which is a notable omission given the maturity of the rest of the disclosure.",
   "scores": [
     {
       "dimension_id": 1,
       "dimension_name": "Net Zero commitment and transition plan",
       "score": 3,
       "evidence_quote": "By 2030, Microsoft will cut its emissions by more than half compared to 2020 and remove more carbon than it emits.",
-      "evidence_location": "2025 Environmental Sustainability Report, p.11; CDP response, section 7.54.3",
+      "evidence_location": "p.11 (Our targets and progress)",
       "confidence": "high",
-      "scoring_rationale": "Microsoft discloses a dated carbon-negative target for 2030, a 2020 baseline, interim reduction targets, and annual progress against the baseline. The evidence also shows annual progress is mixed, with total Scope 1, 2, and 3 emissions up 23.4% versus baseline."
+      "scoring_rationale": "Microsoft states a specific carbon-negative target by 2030 with quantified interim milestones (>50% emission reduction from 2020 baseline, 100% CFE by 2025), a named decarbonisation pathway (CFE procurement, carbon removal, supplier engagement), and board-level governance via the Environmental, Social, and Public Policy Committee and the internal Climate Council with cross-company representation."
     },
     {
       "dimension_id": 2,
       "dimension_name": "Scope 1 & 2 emissions disclosure",
-      "score": 2,
-      "evidence_quote": "We are reporting a Scope 2, location-based figure",
-      "evidence_location": "Microsoft-2025-CDP-response.pdf, sections 6.1, 7.2, 7.3, 7.6, 7.7",
+      "score": 3,
+      "evidence_quote": "Our Scope 1 and 2 emissions decreased by 30% from the 2020 base year... driven by our ongoing work to advance clean energy procurement.",
+      "evidence_location": "p.11 (Our targets and progress)",
       "confidence": "high",
-      "scoring_rationale": "Microsoft discloses Scope 1 and Scope 2 emissions using the GHG Protocol, with an operational-control boundary and both location-based and market-based Scope 2 figures. Score 2 not 3 because the reviewed evidence does not show a clear three-year absolute reduction trend for Scope 1 and 2."
+      "scoring_rationale": "Quantified Scope 1 and Scope 2 (market-based) emissions are disclosed with year-on-year comparison across FY20\u2013FY24 (Carbon Table 1, p.12), a 29.9%/30% reduction from the 2020 baseline is reported, and Deloitte & Touche LLP performed a review of specified information in the Environmental Data Fact Sheet, constituting third-party assurance."
     },
     {
       "dimension_id": 3,
       "dimension_name": "Scope 3 emissions disclosure",
-      "score": 2,
-      "evidence_quote": "Microsoft's Scope 3 emissions continue to account for more than 97% of our total emissions.",
-      "evidence_location": "2025 Environmental Sustainability Report, p.13; Microsoft-2025-CDP-response.pdf, sections 7.4.1 and 7.8",
+      "score": 3,
+      "evidence_quote": "Microsoft's Scope 3 emissions continue to account for more than 97% of our total emissions... increased by 26% from our 2020 baseline.",
+      "evidence_location": "p.13 (Carbon Table 2)",
       "confidence": "high",
-      "scoring_rationale": "Microsoft discloses material Scope 3 categories, exclusions, methodologies, and category-level emissions, including supplier-specific, spend-based, and LCA methods. Score 2 not 3 because supplier engagement is evidenced but overall Scope 3 emissions increased 26% versus the 2020 baseline, so reduction impact is not yet clearly demonstrated at total Scope 3 level."
+      "scoring_rationale": "Scope 3 emissions are disclosed across 11 named GHG Protocol categories with percentage breakdowns and absolute figures (Carbon Table 2, p.13), a methodology note references management's criteria and the GHG Protocol, and Deloitte & Touche LLP's review of the Environmental Data Fact Sheet covers this data."
     },
     {
       "dimension_id": 4,
       "dimension_name": "Third-party verification and assurance",
       "score": 2,
-      "evidence_quote": "We engaged Deloitte & Touche LLP to perform a review in accordance with the attestation standards",
-      "evidence_location": "Microsoft-2025-CDP-response.pdf, sections 7.9.1, 7.9.2, 7.9.3, 13.1.1",
+      "evidence_quote": "Deloitte & Touche LLP performed a review relating to specified information within Section 1 of the Environmental Data Fact Sheet.",
+      "evidence_location": "p.2 (Reporting disclosure)",
       "confidence": "high",
-      "scoring_rationale": "Microsoft reports external limited assurance by Deloitte under AICPA attestation standards for 100% of Scope 1 and both Scope 2 approaches. Score 2 not 3 because the evidence indicates limited assurance and only partial Scope 3 assurance, not reasonable assurance or AA1000AS Type 2 covering Scope 1, 2, and material Scope 3."
+      "scoring_rationale": "A named third party (Deloitte & Touche LLP) performed external assurance of GHG and environmental data; however, the engagement is described as a 'review' of 'specified information' rather than full reasonable assurance to a named standard such as ISAE 3000, and the assurance statement itself is published in the separate Data Fact Sheet rather than within this report, limiting the score to 2."
     },
     {
       "dimension_id": 5,
       "dimension_name": "Science-based targets validation",
       "score": 1,
-      "evidence_quote": "Yes, and this target has been approved by the Science Based Targets initiative",
-      "evidence_location": "Microsoft-2025-CDP-response.pdf, sections 7.53.2, 7.54.1, 7.54.3",
-      "confidence": "medium",
-      "scoring_rationale": "Microsoft discloses SBTi-approved elements, including a Scope 3 intensity target and a renewable electricity target. Score 1 not 2 because the net-zero/carbon-negative target is explicitly marked as not science-based, and the document does not evidence an SBTi-validated near-term target covering Scope 1, Scope 2, and material Scope 3 together."
+      "evidence_quote": "streamlined decision-making and alignment to science-based targets",
+      "evidence_location": "p.59 (Microsoft for Sustainability \u2014 Envirotainer case study)",
+      "confidence": "low",
+      "scoring_rationale": "The document does not disclose that Microsoft itself has signed an SBTi commitment letter, submitted targets for SBTi validation, or received SBTi-validated targets; the sole reference to 'science-based targets' appears in a customer case study, not in relation to Microsoft's own targets, so only an aspirational/indirect signal is present at best."
     }
-  ],
-  "overall_notes": "Microsoft provides strong, quantitative disclosure with clear boundaries, GHG Protocol methodology, category-level Scope 3 reporting, and external assurance for Scope 1 and 2. The main procurement caveats are that total emissions and Scope 3 emissions have increased versus the 2020 baseline, the transition plan depends partly on carbon removals and market development, and some renewable claims include unbundled EACs/RECs, which are weaker than direct PPAs or on-site generation. Disclosure quality is high, but the gap between ambition and current absolute emissions trajectory should be treated as a material risk.",
-  "evidence_quality_flag": "mixed"
+  ]
 }

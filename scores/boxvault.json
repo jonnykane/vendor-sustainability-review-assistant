@@ -1,29 +1,35 @@
 {
   "vendor_id": "boxvault",
-  "vendor_name": "BoxVault Storage",
+  "vendor_name": "Boxvault",
   "document_filename": "boxvault_sustainability.html",
   "document_type": "web_statement",
   "reporting_period": "FY2024",
-  "total_score": 6,
+  "total_score": 8,
   "max_score": 15,
+  "scorer": "claude-sonnet-4-6",
+  "scoring_date": "2026-05-02",
+  "rubric_version": "1.0",
+  "schema_version": "1.0",
+  "evidence_quality_flag": "mixed",
+  "overall_notes": "BoxVault's web statement presents confident sustainability branding \u2014 including 'Carbon Neutral', 'SBTi Aligned', and 'Independently Verified' badges \u2014 but the underlying evidence is materially weaker than the headline claims suggest. The most significant gaps are the absence of genuine third-party assurance (verification is performed internally), the complete lack of quantified Scope 3 category data, and SBTi targets that remain unvalidated. Disclosure quality would improve substantially upon publication of the promised FY2024 Impact Report with full Scope 3 data and external limited assurance.",
   "scores": [
     {
       "dimension_id": 1,
       "dimension_name": "Net Zero commitment and transition plan",
       "score": 2,
-      "evidence_quote": "Net Zero by 2040",
+      "evidence_quote": "Net Zero by 2040 across our value chain, aligned with Science Based Targets initiative methodology. 50% reduction by 2030 in Scope 1 and Scope 2 emissions from our 2021 baseline.",
       "evidence_location": "Our Climate Targets section",
-      "confidence": "high",
-      "scoring_rationale": "The document states a Net Zero target year of 2040 and a 2021 baseline, with an interim 2030 Scope 1 and 2 reduction target. It does not provide annual progress reporting against the baseline, so it does not meet the threshold for 3."
+      "confidence": "medium",
+      "scoring_rationale": "A specific net zero year (2040) and an interim emissions reduction milestone (50% by 2030 from a 2021 baseline) are stated, satisfying the committed threshold. However, a credible named decarbonisation pathway and explicit board-level accountability are not articulated beyond the CSO quote, falling short of a score of 3."
     },
     {
       "dimension_id": 2,
       "dimension_name": "Scope 1 & 2 emissions disclosure",
-      "score": 1,
-      "evidence_quote": "Scope 2 (purchased electricity, market-based)",
+      "score": 2,
+      "evidence_quote": "Scope 1 (direct emissions) 14,820 tCO2e; Scope 2 (purchased electricity, market-based) 2,140 tCO2e. Methodology aligned with the GHG Protocol.",
       "evidence_location": "Greenhouse Gas Emissions (FY2024) section",
       "confidence": "high",
-      "scoring_rationale": "Scope 1 and market-based Scope 2 figures are disclosed and methodology is stated as aligned with the GHG Protocol. However, location-based Scope 2 is not disclosed, and there is no three-year absolute reduction trend."
+      "scoring_rationale": "Quantified Scope 1 and market-based Scope 2 figures are disclosed in absolute tCO2e for FY2024, meeting the committed threshold. However, no location-based Scope 2 figure, no year-on-year comparison table, and no credible third-party assurance are present, precluding a score of 3."
     },
     {
       "dimension_id": 3,
@@ -32,27 +38,25 @@
       "evidence_quote": "Detailed Scope 3 category breakdown is being prepared for our forthcoming Impact Report.",
       "evidence_location": "Scope 3: Engaging Our Value Chain section",
       "confidence": "high",
-      "scoring_rationale": "The document claims comprehensive Scope 3 coverage but provides no category-level breakdown, quantitative emissions data, or materiality assessment. Supplier engagement is described in general terms without evidence of emissions reduction."
+      "scoring_rationale": "Scope 3 is acknowledged as material and a supplier engagement programme is described, but no quantified category-level figures in tCO2e are provided in this document. The disclosure is aspirational, with full data deferred to a future Impact Report."
     },
     {
       "dimension_id": 4,
       "dimension_name": "Third-party verification and assurance",
       "score": 1,
-      "evidence_quote": "verified annually by our internal Sustainability Audit function",
-      "evidence_location": "Frequently Asked Questions — Who verifies BoxVault's emissions data?",
+      "evidence_quote": "Our 2024 verification was completed in January 2025 by our internal Sustainability Audit team, working in coordination with our external accounting partners.",
+      "evidence_location": "Independent Verification section",
       "confidence": "high",
-      "scoring_rationale": "Verification is performed by an internal Sustainability Audit function, not an external assurance provider under ISAE 3000, AA1000AS, or equivalent. External limited assurance is only described as a future option."
+      "scoring_rationale": "Although 'independent verification' is prominently claimed, the verification is performed by an internal Sustainability Audit function \u2014 not a named external third party \u2014 and no assurance standard (e.g. ISAE 3000, ISO 14064-3) is cited. The FAQ also confirms external limited assurance is only being evaluated for future cycles, so this does not meet the criteria for a score of 2."
     },
     {
       "dimension_id": 5,
       "dimension_name": "Science-based targets validation",
-      "score": 1,
-      "evidence_quote": "currently preparing a formal submission to SBTi for validation",
-      "evidence_location": "Frequently Asked Questions — Are BoxVault's targets validated by the Science Based Targets initiative?",
+      "score": 2,
+      "evidence_quote": "We are currently preparing a formal submission to SBTi for validation, which we expect to complete in the coming reporting cycle.",
+      "evidence_location": "Frequently Asked Questions section",
       "confidence": "high",
-      "scoring_rationale": "Targets are quantified and described as using the SBTi framework, but the document explicitly says formal SBTi validation has not yet been completed. Under the rubric, SBTi-aligned methodology does not qualify for a score of 2."
+      "scoring_rationale": "BoxVault explicitly states it is preparing a formal SBTi submission but validation has not yet been confirmed, placing this squarely at the committed level. The FAQ clarifies targets were developed using SBTi methodology but a commitment letter or validated approval is not confirmed."
     }
-  ],
-  "overall_notes": "Disclosure quality is mixed: the document provides dated Net Zero and interim reduction targets plus FY2024 Scope 1 and market-based Scope 2 figures, but it relies heavily on marketing language for Scope 3, verification, and supplier engagement. Greenwashing risk is elevated around the badges and phrases 'Carbon Neutral', 'SBTi Aligned', and 'Independently Verified', because the evidence shows offset-based neutrality, no SBTi validation yet, and internal rather than third-party assurance. Renewable electricity is based partly on unbundled RECs and Guarantees of Origin, which is a weaker claim than direct PPAs or on-site generation.",
-  "evidence_quality_flag": "mixed"
+  ]
 }

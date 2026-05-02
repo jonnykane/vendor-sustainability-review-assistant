@@ -1,58 +1,62 @@
 {
   "vendor_id": "archive_ni",
-  "vendor_name": "Archive Northern Ireland Ltd",
+  "vendor_name": "Archive Ni",
   "document_filename": "archive_ni_annual_report_2024_extract.pdf",
   "document_type": "annual_report_extract",
-  "reporting_period": "FY2024",
-  "total_score": 6,
+  "reporting_period": "FY2023/24",
+  "total_score": 7,
   "max_score": 15,
+  "scorer": "claude-sonnet-4-6",
+  "scoring_date": "2026-05-02",
+  "rubric_version": "1.0",
+  "schema_version": "1.0",
+  "evidence_quality_flag": "mixed",
+  "overall_notes": "Archive Northern Ireland Ltd has made a credible start to climate disclosure for a small organisation, providing quantified Scope 1, 2 and partial Scope 3 data in its second year of quantitative reporting. However, the disclosure is materially limited by the complete absence of third-party assurance, only aspirational SBTi engagement, and a net zero target that currently lacks interim milestones or a transition pathway. Evidence quality is consistent across dimensions but uniformly at an early-stage maturity level.",
   "scores": [
     {
       "dimension_id": 1,
       "dimension_name": "Net Zero commitment and transition plan",
       "score": 2,
-      "evidence_quote": "The Board has approved a target of Net Zero greenhouse gas emissions by 2050. Our baseline year is 2022",
-      "evidence_location": "Page 2, section 6.1 Our Climate Commitment",
+      "evidence_quote": "The Board has approved a target of Net Zero greenhouse gas emissions by 2050. Our baseline year is 2022 and we will publish progress against this target annually.",
+      "evidence_location": "p.2, Section 6.1",
       "confidence": "high",
-      "scoring_rationale": "The document states a Net Zero target year of 2050 and a 2022 baseline year. It does not have an interim 2030 target, so it does not meet the threshold for a score of 3."
+      "scoring_rationale": "A specific net zero target year (2050) is stated with board approval and a baseline year, qualifying for score 2. However, no interim milestones currently exist and no named decarbonisation pathway is described, precluding a score of 3."
     },
     {
       "dimension_id": 2,
       "dimension_name": "Scope 1 & 2 emissions disclosure",
-      "score": 1,
-      "evidence_quote": "Emissions are calculated in accordance with the GHG Protocol Corporate Standard.",
-      "evidence_location": "Page 3, section 6.2 Greenhouse Gas Emissions",
-      "confidence": "medium",
-      "scoring_rationale": "Scope 1 and location-based Scope 2 emissions are disclosed with methodology, boundary and emission factors. However, market-based Scope 2 is not disclosed, and there is not at least three years of absolute emissions trend data."
+      "score": 2,
+      "evidence_quote": "Scope 1 (gas, fleet, refrigerants) 412 [tCO2e]; Scope 2 (electricity, location-based) 286 [tCO2e]; Total Scope 1 & 2 698",
+      "evidence_location": "p.3, Section 6.2",
+      "confidence": "high",
+      "scoring_rationale": "Quantified Scope 1 and Scope 2 (location-based) figures are disclosed in absolute tCO\u2082e, meeting the score 2 threshold. A score of 3 is not awarded because there is no market-based Scope 2 figure, no year-on-year emissions comparison (only electricity consumption is compared), and no third-party assurance."
     },
     {
       "dimension_id": 3,
       "dimension_name": "Scope 3 emissions disclosure",
-      "score": 1,
-      "evidence_quote": "We have included business travel and waste generated in operations.",
-      "evidence_location": "Page 3, section 6.2 Greenhouse Gas Emissions",
+      "score": 2,
+      "evidence_quote": "Scope 3 (partial \u2014 see below) 184 [tCO2e]. We have included business travel and waste generated in operations.",
+      "evidence_location": "p.3, Section 6.2",
       "confidence": "high",
-      "scoring_rationale": "Scope 3 disclosure is explicitly partial and limited to business travel and waste generated in operations. The company acknowledges this is only a small proportion of likely total Scope 3 emissions."
+      "scoring_rationale": "At least one material Scope 3 category is quantified (184 tCO\u2082e covering business travel and waste), satisfying the score 2 criterion. A score of 3 is not warranted as coverage is explicitly partial, no methodology note is provided, and there is no third-party assurance."
     },
     {
       "dimension_id": 4,
       "dimension_name": "Third-party verification and assurance",
-      "score": 1,
-      "evidence_quote": "Our environmental data has been reviewed internally by our Finance Director and the Board's Audit Committee.",
-      "evidence_location": "Page 4, section 6.3 Verification of Data",
+      "score": 0,
+      "evidence_quote": "We have not yet engaged an external assurance provider but will keep this under review as our reporting matures.",
+      "evidence_location": "p.4, Section 6.3",
       "confidence": "high",
-      "scoring_rationale": "The document evidences internal review only and explicitly states that no external assurance provider has been engaged. This does not meet the threshold for third-party assurance."
+      "scoring_rationale": "The document explicitly states that no external assurance provider has been engaged. Internal review by the Finance Director and Audit Committee does not constitute third-party verification, so a score of 0 is appropriate."
     },
     {
       "dimension_id": 5,
       "dimension_name": "Science-based targets validation",
       "score": 1,
-      "evidence_quote": "We have reviewed the Science Based Targets initiative (SBTi) framework and intend to seek validation",
-      "evidence_location": "Page 2, section 6.1 Our Climate Commitment",
+      "evidence_quote": "We have reviewed the Science Based Targets initiative (SBTi) framework and intend to seek validation of our targets in due course.",
+      "evidence_location": "p.2, Section 6.1",
       "confidence": "high",
-      "scoring_rationale": "The company has a stated Net Zero target, but there is no evidence of SBTi validation. Intending to seek validation is not equivalent to having SBTi-validated targets."
+      "scoring_rationale": "SBTi is explicitly referenced and validation is expressed as an intention, but no commitment letter has been signed and no submission has been made, placing this firmly at score 1 (aspiration only)."
     }
-  ],
-  "overall_notes": "The disclosure is transparent about its limitations, particularly the absence of an interim target, partial Scope 3 coverage, lack of external assurance and lack of SBTi validation. The document is relatively clear for a small annual report extract, but the evidence base remains immature and mostly self-reported. No significant greenwashing concern is apparent because caveats are stated plainly, although future-facing commitments should not be treated as achieved progress.",
-  "evidence_quality_flag": "mixed"
+  ]
 }
