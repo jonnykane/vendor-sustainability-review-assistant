@@ -210,6 +210,7 @@ python eval-harness/eval.py \
 - Expand the golden set from 5 to 15 vendors with more real disclosures
 - Add the evidence validity spot-check pass and surface the human-validated rate alongside automated metrics
 - Test whether retrieval (RAG) improves Scope 3 scoring on very long reports where material evidence is deep in appendices
+- Add a file upload endpoint wrapping the scoring pipeline so users can add vendors without developer access — the main engineering   consideration is handling 30–50 second scoring latency gracefully.
 - Add reviewer feedback loop — approved/edited/rejected decisions feed back into prompt refinement
 
 ---
