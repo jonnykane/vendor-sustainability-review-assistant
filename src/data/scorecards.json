@@ -1,0 +1,297 @@
+[
+  {
+    "vendor_id": "archive_ni",
+    "vendor_name": "Archive Ni",
+    "document_filename": "archive_ni_annual_report_2024_extract.pdf",
+    "document_type": "annual_report_extract",
+    "reporting_period": "FY2023/24",
+    "total_score": 6,
+    "max_score": 15,
+    "evidence_quality_flag": "mixed",
+    "ground_truth_score": 6,
+    "overall_notes": "Archive Northern Ireland Ltd has made a meaningful first step in structured climate disclosure, providing quantified Scope 1, 2 and partial Scope 3 emissions for FY2023/24 alongside a board-approved 2050 net zero target. However, the disclosure lacks third-party assurance, interim milestones, a formal transition pathway, and SBTi validation, all of which limit scores across multiple dimensions. Evidence quality is mixed: emissions data is reasonably detailed but governance, verification and science-based target dimensions are underdeveloped.",
+    "scores": [
+      {
+        "dimension_id": 1,
+        "dimension_name": "Net Zero commitment and transition plan",
+        "score": 2,
+        "evidence_quote": "The Board has approved a target of Net Zero greenhouse gas emissions by 2050. Our baseline year is 2022 and we will publish progress against this target annually.",
+        "evidence_location": "p.2, Section 6.1",
+        "confidence": "high",
+        "scoring_rationale": "A specific net zero year (2050) is stated with a baseline year and a commitment to annual reporting. However, no interim milestones exist yet and no named decarbonisation pathway is in place, falling short of a credible transition plan required for a score of 3."
+      },
+      {
+        "dimension_id": 2,
+        "dimension_name": "Scope 1 & 2 emissions disclosure",
+        "score": 1,
+        "evidence_quote": "Scope 1 (gas, fleet, refrigerants) 412 [tCO2e]; Scope 2 (electricity, location-based) 286 [tCO2e]; Total Scope 1 & 2 698.",
+        "evidence_location": "p.3, Section 6.2",
+        "confidence": "high",
+        "scoring_rationale": "Both Scope 1 and Scope 2 (location-based) are quantified in absolute tCO2e for FY2023/24 using the GHG Protocol and UK Government BEIS factors. A score of 3 is not warranted as there is no year-on-year emissions comparison (only an energy consumption comparator) and no third-party assurance. [Second-pass correction: 2\u21921; reduction_trend=False, both_scope2_types=False]"
+      },
+      {
+        "dimension_id": 3,
+        "dimension_name": "Scope 3 emissions disclosure",
+        "score": 2,
+        "evidence_quote": "Scope 3 (partial \u2014 see below) 184 [tCO2e]. We have included business travel and waste generated in operations.",
+        "evidence_location": "p.3, Section 6.2",
+        "confidence": "high",
+        "scoring_rationale": "At least one Scope 3 figure is quantified (184 tCO2e) covering business travel and waste, meeting the threshold for a score of 2. A score of 3 is not warranted as coverage is explicitly partial, no methodology note is provided, and there is no third-party assurance."
+      },
+      {
+        "dimension_id": 4,
+        "dimension_name": "Third-party verification and assurance",
+        "score": 0,
+        "evidence_quote": "We have not yet engaged an external assurance provider but will keep this under review as our reporting matures.",
+        "evidence_location": "p.4, Section 6.3",
+        "confidence": "high",
+        "scoring_rationale": "The document explicitly states that no external assurance provider has been engaged. Internal review by the Finance Director and Audit Committee does not constitute third-party verification, so a score of 0 is assigned."
+      },
+      {
+        "dimension_id": 5,
+        "dimension_name": "Science-based targets validation",
+        "score": 1,
+        "evidence_quote": "We have reviewed the Science Based Targets initiative (SBTi) framework and intend to seek validation of our targets in due course.",
+        "evidence_location": "p.2, Section 6.1",
+        "confidence": "high",
+        "scoring_rationale": "SBTi is mentioned as an aspiration with an intention to seek validation, but no commitment letter has been signed and no targets have been submitted. This is an aspiration only, warranting a score of 1."
+      }
+    ]
+  },
+  {
+    "vendor_id": "boxvault",
+    "vendor_name": "Boxvault",
+    "document_filename": "boxvault_sustainability.html",
+    "document_type": "web_statement",
+    "reporting_period": "FY2024",
+    "total_score": 6,
+    "max_score": 15,
+    "evidence_quality_flag": "mixed",
+    "ground_truth_score": 6,
+    "overall_notes": "BoxVault presents a moderately developed sustainability disclosure with quantified Scope 1 and 2 emissions, a net zero target with an interim milestone, and SBTi-aligned targets pending formal submission. However, the disclosure is materially weakened by the absence of genuine third-party assurance (the 'verification' is internal), no quantified Scope 3 category data, and no year-on-year emissions comparison. Several headline claims \u2014 including 'SBTi Aligned' and 'Independently Verified' \u2014 appear to overstate the current state of evidence in the document.",
+    "scores": [
+      {
+        "dimension_id": 1,
+        "dimension_name": "Net Zero commitment and transition plan",
+        "score": 2,
+        "evidence_quote": "Net Zero by 2040 across our value chain, aligned with Science Based Targets initiative methodology. 50% reduction by 2030 in Scope 1 and Scope 2 emissions from our 2021 baseline.",
+        "evidence_location": "Our Climate Targets section",
+        "confidence": "medium",
+        "scoring_rationale": "A net zero target year (2040) and an interim milestone (50% reduction by 2030 from 2021 baseline) are stated, satisfying the committed threshold. However, no named decarbonisation pathway or explicit board-level accountability mechanism is documented, falling short of a score of 3."
+      },
+      {
+        "dimension_id": 2,
+        "dimension_name": "Scope 1 & 2 emissions disclosure",
+        "score": 1,
+        "evidence_quote": "Scope 1 (direct emissions) 14,820 tCO2e. Scope 2 (purchased electricity, market-based) 2,140 tCO2e. Methodology aligned with the GHG Protocol.",
+        "evidence_location": "Greenhouse Gas Emissions (FY2024) section",
+        "confidence": "high",
+        "scoring_rationale": "Quantified Scope 1 and market-based Scope 2 figures are disclosed for FY2024 with GHG Protocol methodology cited. However, no location-based Scope 2 figure or year-on-year comparison is provided, and assurance is not genuinely third-party, preventing a score of 3. [Second-pass correction: 2\u21921; reduction_trend=False, both_scope2_types=False]"
+      },
+      {
+        "dimension_id": 3,
+        "dimension_name": "Scope 3 emissions disclosure",
+        "score": 1,
+        "evidence_quote": "Scope 3 (value chain): Disclosed... Detailed Scope 3 category breakdown is being prepared for our forthcoming Impact Report.",
+        "evidence_location": "Greenhouse Gas Emissions (FY2024) section; Scope 3: Engaging Our Value Chain section",
+        "confidence": "high",
+        "scoring_rationale": "Scope 3 is acknowledged as material and a supplier engagement programme is described, but no quantified category-level figures in tCO2e are provided in this document; the breakdown is deferred to a forthcoming report."
+      },
+      {
+        "dimension_id": 4,
+        "dimension_name": "Third-party verification and assurance",
+        "score": 1,
+        "evidence_quote": "Our 2024 verification was completed in January 2025 by our internal Sustainability Audit team, working in coordination with our external accounting partners.",
+        "evidence_location": "Independent Verification section",
+        "confidence": "high",
+        "scoring_rationale": "Verification is described but is explicitly conducted by an internal function, with no named independent third-party assurer, no named assurance standard (e.g. ISAE 3000), and the FAQ confirms external limited assurance is only being evaluated for future cycles."
+      },
+      {
+        "dimension_id": 5,
+        "dimension_name": "Science-based targets validation",
+        "score": 1,
+        "evidence_quote": "We are currently preparing a formal submission to SBTi for validation, which we expect to complete in the coming reporting cycle.",
+        "evidence_location": "Frequently Asked Questions section",
+        "confidence": "high",
+        "scoring_rationale": "Targets are developed using the SBTi framework and a formal submission is being prepared, indicating more than mere aspiration; however, no SBTi commitment letter has been signed and validation has not yet been confirmed, so a score of 3 is not warranted. [Second-pass correction: 2\u21921; SBTi aligned/methodology only, not validated]"
+      }
+    ]
+  },
+  {
+    "vendor_id": "heritage",
+    "vendor_name": "Heritage",
+    "document_filename": "heritage_document_services.html",
+    "document_type": "web_statement",
+    "reporting_period": "<UNKNOWN>",
+    "total_score": 1,
+    "max_score": 15,
+    "evidence_quality_flag": "weak",
+    "ground_truth_score": 0,
+    "overall_notes": "This is a brief web statement containing only high-level, aspirational sustainability language with no quantified data, targets, timelines, or third-party assurance of any kind. The disclosure is limited to operational initiatives (recycling, energy-efficient lighting) and broad commitments, falling well short of credible climate reporting standards. Significant improvements across all five dimensions would be required to meet basic transparency expectations.",
+    "scores": [
+      {
+        "dimension_id": 1,
+        "dimension_name": "Net Zero commitment and transition plan",
+        "score": 1,
+        "evidence_quote": "We are committed to reducing our environmental impact and to operating in a sustainable manner.",
+        "evidence_location": "Our Environmental Commitment section",
+        "confidence": "high",
+        "scoring_rationale": "The document expresses a general climate ambition and mentions supporting 'the transition to a low-carbon economy', but no net zero target, specific year, or transition pathway is stated."
+      },
+      {
+        "dimension_id": 2,
+        "dimension_name": "Scope 1 & 2 emissions disclosure",
+        "score": 0,
+        "evidence_quote": "No evidence found",
+        "evidence_location": "N/A",
+        "confidence": "high",
+        "scoring_rationale": "No Scope 1 or Scope 2 emissions figures are disclosed anywhere in the document \u2014 not even qualitatively measured."
+      },
+      {
+        "dimension_id": 3,
+        "dimension_name": "Scope 3 emissions disclosure",
+        "score": 0,
+        "evidence_quote": "No evidence found",
+        "evidence_location": "N/A",
+        "confidence": "high",
+        "scoring_rationale": "Scope 3 or value chain emissions are not mentioned at all in the document."
+      },
+      {
+        "dimension_id": 4,
+        "dimension_name": "Third-party verification and assurance",
+        "score": 0,
+        "evidence_quote": "No evidence found",
+        "evidence_location": "N/A",
+        "confidence": "high",
+        "scoring_rationale": "No reference to any external verification, assurance, audit, or named third party is made anywhere in the document."
+      },
+      {
+        "dimension_id": 5,
+        "dimension_name": "Science-based targets validation",
+        "score": 0,
+        "evidence_quote": "No evidence found",
+        "evidence_location": "N/A",
+        "confidence": "high",
+        "scoring_rationale": "Science-based targets, SBTi, or 1.5\u00b0C alignment are not referenced anywhere in the document."
+      }
+    ]
+  },
+  {
+    "vendor_id": "microsoft",
+    "vendor_name": "Microsoft",
+    "document_filename": "2025-Microsoft-Environmental-Sustainability-Report.pdf",
+    "document_type": "sustainability_report",
+    "reporting_period": "FY2024",
+    "total_score": 9,
+    "max_score": 15,
+    "evidence_quality_flag": "strong",
+    "ground_truth_score": 10,
+    "overall_notes": "Microsoft's 2025 Environmental Sustainability Report (covering FY2024) is a comprehensive, data-rich disclosure covering carbon, water, waste, and ecosystems commitments, with quantified multi-year progress against 2030 targets and granular Scope 1, 2, and 3 emissions breakdowns. Third-party limited review by Deloitte & Touche LLP adds credibility to the data, though the assurance scope and standard are not explicitly named in the narrative report. The single notable gap is the absence of SBTi-validated targets; Microsoft's reduction ambitions are internally defined rather than externally validated against a 1.5 \u00b0C pathway.",
+    "scores": [
+      {
+        "dimension_id": 1,
+        "dimension_name": "Net Zero commitment and transition plan",
+        "score": 3,
+        "evidence_quote": "By 2030, Microsoft will cut its emissions by more than half compared to 2020 and remove more carbon than it emits.",
+        "evidence_location": "p.11 (Our targets and progress) and p.10 (Microsoft Climate Council)",
+        "confidence": "high",
+        "scoring_rationale": "Microsoft states a specific net zero (carbon negative) target by 2030 with quantified interim milestones (>50% emissions reduction vs 2020 baseline, 100% CFE by 2025, carbon removal targets by 2030 and 2050). A named governance body\u2014the Microsoft Climate Council\u2014provides board-adjacent accountability, and a credible decarbonisation pathway covering Scope 1, 2, and 3 is detailed across efficiency, availability, and measurement workstreams."
+      },
+      {
+        "dimension_id": 2,
+        "dimension_name": "Scope 1 & 2 emissions disclosure",
+        "score": 1,
+        "evidence_quote": "Our Scope 1 and 2 emissions decreased by 30% from the 2020 base year\u2026driven by clean energy procurement, green tariff programs.",
+        "evidence_location": "p.11 (Our targets and progress \u2014 Scope 1 and 2 emissions)",
+        "confidence": "high",
+        "scoring_rationale": "The report discloses both Scope 1 and Scope 2 (market-based) emissions with year-on-year directional comparison against a 2020 baseline, and quantified absolute figures are published in the accompanying Environmental Data Fact Sheet. Deloitte & Touche LLP performed a third-party review of specified information in Section 1 of that Fact Sheet, satisfying the assurance criterion for a score of 3. [Second-pass correction: 3\u21921; reduction_trend=False, both_scope2_types=False]"
+      },
+      {
+        "dimension_id": 3,
+        "dimension_name": "Scope 3 emissions disclosure",
+        "score": 2,
+        "evidence_quote": "Scope 3 emissions continue to account for more than 97% of our total emissions\u2026broken down by source [14 categories shown].",
+        "evidence_location": "p.13 (Carbon Table 2 \u2014 Breaking down our FY24 Scope 3 emissions by source)",
+        "confidence": "high",
+        "scoring_rationale": "Microsoft discloses quantified Scope 3 emissions across all material GHG Protocol categories with percentage breakdowns (e.g. Category 1 Purchased Goods 34.04%, Category 2 Capital Goods 40.83%, Category 11 Use of Sold Products 11.83%), a methodology note referencing management's criteria, and a 26% increase vs 2020 baseline. Third-party review by Deloitte & Touche LLP covers the Environmental Data Fact Sheet where the underlying figures reside, meeting the comprehensive disclosure and assurance threshold. [Second-pass correction: 3\u21922; scope3_reducing=False]"
+      },
+      {
+        "dimension_id": 4,
+        "dimension_name": "Third-party verification and assurance",
+        "score": 2,
+        "evidence_quote": "Deloitte & Touche LLP performed a review relating to specified information within Section 1 of the Environmental Data Fact Sheet.",
+        "evidence_location": "p.2 (Reporting disclosure) and Appendix A, p.88",
+        "confidence": "high",
+        "scoring_rationale": "A named third party (Deloitte & Touche LLP) conducted an external review of GHG and environmental data in the Environmental Data Fact Sheet; however, the report characterises this as a 'review' of 'specified information' rather than a full reasonable-assurance engagement to a named standard (e.g. ISAE 3000 or ISO 14064-3), and no separate assurance statement is reproduced within the document. This is consistent with limited rather than reasonable assurance, warranting a score of 2."
+      },
+      {
+        "dimension_id": 5,
+        "dimension_name": "Science-based targets validation",
+        "score": 1,
+        "evidence_quote": "By 2030, we will reduce our Scope 3 emissions by more than half from a 2020 baseline\u2026aligned with our 2030 carbon negative commitment.",
+        "evidence_location": "p.11 (Our targets and progress) and p.59 (Envirotainer \u2014 'alignment to science-based targets')",
+        "confidence": "medium",
+        "scoring_rationale": "The report does not mention SBTi, a commitment letter, or validation of science-based targets; the reduction targets (>50% Scope 1&2 and Scope 3 by 2030 vs 2020) are internally set and described as aligned with the company's own carbon-negative commitment rather than validated by the Science Based Targets initiative. A customer case study (Envirotainer) references SBTi alignment, but this relates to the customer, not Microsoft itself, warranting only a score of 1."
+      }
+    ]
+  },
+  {
+    "vendor_id": "sentinel_records",
+    "vendor_name": "Sentinel Records",
+    "document_filename": "sentinel_records_sustainability_report_2024.pdf",
+    "document_type": "sustainability_report",
+    "reporting_period": "2024",
+    "total_score": 13,
+    "max_score": 15,
+    "evidence_quality_flag": "strong",
+    "ground_truth_score": 12,
+    "overall_notes": "Sentinel Records Ltd presents a high-quality, comprehensive sustainability disclosure with quantified Scope 1, 2, and 3 emissions across multiple years, SBTi-validated near-term targets, a published Carbon Reduction Plan with interim milestones, and Board-level governance. The primary gap is that assurance remains at the limited (rather than reasonable) level, with reasonable assurance targeted for 2026; Scope 3 reduction is also noted as behind trajectory.",
+    "scores": [
+      {
+        "dimension_id": 1,
+        "dimension_name": "Net Zero commitment and transition plan",
+        "score": 3,
+        "evidence_quote": "Net Zero by 2045 commitment...interim milestones...Carbon Reduction Plan (December 2024) sets out the abatement pathway across four levers...board-level accountability stated.",
+        "evidence_location": "p.2\u20133, Section 1 & Section 6",
+        "confidence": "high",
+        "scoring_rationale": "Sentinel Records has a Net Zero by 2045 target with a published Carbon Reduction Plan, quantified interim milestones (50% Scope 1 & 2 reduction by 2030), named decarbonisation levers, \u00a314.2m committed capex, and Board-level governance with executive remuneration linked to targets \u2014 satisfying all criteria for a score of 3."
+      },
+      {
+        "dimension_id": 2,
+        "dimension_name": "Scope 1 & 2 emissions disclosure",
+        "score": 3,
+        "evidence_quote": "Scope 1 (fuel, fleet, refrigerants)...2,440 [tCO2e 2024]; Scope 2 location-based 4,025; Scope 2 market-based 780. YoY change (market-based) -8.9%",
+        "evidence_location": "p.4, Section 2",
+        "confidence": "high",
+        "scoring_rationale": "Both Scope 1 and Scope 2 (location-based and market-based) are disclosed in absolute tCO2e with a four-year time series (2019, 2022, 2023, 2024) including year-on-year percentage changes, and the data has been subject to third-party limited assurance under ISAE 3000/3410 \u2014 meeting all criteria for a score of 3."
+      },
+      {
+        "dimension_id": 3,
+        "dimension_name": "Scope 3 emissions disclosure",
+        "score": 2,
+        "evidence_quote": "We disclose Scope 3 emissions across all categories deemed material...7 are reported as material...Total material Scope 3 58,800 tCO2e...methodology in Appendix B.",
+        "evidence_location": "p.5, Section 3",
+        "confidence": "high",
+        "scoring_rationale": "Seven material Scope 3 categories are quantified in tCO2e with calculation methodologies stated per category, a refreshed materiality assessment with Appendix B methodology note, and limited assurance covering Categories 1, 4, 6, and 9 \u2014 meeting the criteria for a score of 3. [Second-pass correction: 3\u21922; scope3_reducing=False]"
+      },
+      {
+        "dimension_id": 4,
+        "dimension_name": "Third-party verification and assurance",
+        "score": 2,
+        "evidence_quote": "Limited assurance by Brackenbury Verification Services Ltd...in accordance with ISAE 3000 (Revised) and ISAE 3410...covers approximately 84% of our reported total emissions footprint.",
+        "evidence_location": "p.6, Section 4",
+        "confidence": "high",
+        "scoring_rationale": "A named third-party assurer (Brackenbury Verification Services Ltd) has provided limited assurance to named standards (ISAE 3000 Revised and ISAE 3410) with a published assurance statement, covering 84% of emissions; however, as this is limited (not reasonable) assurance, the score is capped at 2 per the rubric."
+      },
+      {
+        "dimension_id": 5,
+        "dimension_name": "Science-based targets validation",
+        "score": 3,
+        "evidence_quote": "Net Zero by 2045 commitment, validated against the Science Based Targets initiative (SBTi) Corporate Net-Zero Standard for near-term targets...validated November 2023.",
+        "evidence_location": "p.2\u20133, Section 1.1",
+        "confidence": "high",
+        "scoring_rationale": "Near-term targets have been formally validated by SBTi (November 2023) against the Corporate Net-Zero Standard, and quantified progress against those targets is reported in Section 5; long-term validation is in progress, but confirmed near-term validation with progress reporting satisfies a score of 3."
+      }
+    ]
+  }
+]
