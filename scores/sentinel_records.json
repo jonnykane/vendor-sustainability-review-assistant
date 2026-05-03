@@ -4,59 +4,59 @@
   "document_filename": "sentinel_records_sustainability_report_2024.pdf",
   "document_type": "sustainability_report",
   "reporting_period": "2024",
-  "total_score": 14,
+  "total_score": 13,
   "max_score": 15,
   "scorer": "claude-sonnet-4-6",
   "scoring_date": "2026-05-02",
   "rubric_version": "1.0",
   "schema_version": "1.0",
   "evidence_quality_flag": "strong",
-  "overall_notes": "Sentinel Records Ltd presents a high-quality, evidence-rich sustainability disclosure. All five dimensions are well-supported with quantified data, named standards, and third-party assurance, with board governance and executive pay linkage adding credibility to the transition plan. The only area short of the highest mark is third-party assurance, which is currently limited rather than reasonable assurance \u2014 a gap the company explicitly plans to close by 2026.",
+  "overall_notes": "Sentinel Records Ltd presents a high-quality, comprehensive sustainability disclosure with quantified Scope 1, 2, and 3 emissions across multiple years, SBTi-validated near-term targets, a published Carbon Reduction Plan with interim milestones, and Board-level governance. The primary gap is that assurance remains at the limited (rather than reasonable) level, with reasonable assurance targeted for 2026; Scope 3 reduction is also noted as behind trajectory.",
   "scores": [
     {
       "dimension_id": 1,
       "dimension_name": "Net Zero commitment and transition plan",
       "score": 3,
-      "evidence_quote": "Net Zero by 2045 commitment\u2026interim milestones\u2026published Carbon Reduction Plan (December 2024)\u2026Board has oversight\u2026Executive remuneration is partially linked",
-      "evidence_location": "p.2, p.3, p.7",
+      "evidence_quote": "Net Zero by 2045 commitment...interim milestones...Carbon Reduction Plan (December 2024) sets out the abatement pathway across four levers...board-level accountability stated.",
+      "evidence_location": "p.2\u20133, Section 1 & Section 6",
       "confidence": "high",
-      "scoring_rationale": "Sentinel states a Net Zero by 2045 target with a validated near-term 2030 interim milestone (-50% Scope 1&2), a published Carbon Reduction Plan with four named decarbonisation levers and committed capex of \u00a314.2m, and board-level accountability with executive pay linkage. All three criteria for score 3 are met."
+      "scoring_rationale": "Sentinel Records has a Net Zero by 2045 target with a published Carbon Reduction Plan, quantified interim milestones (50% Scope 1 & 2 reduction by 2030), named decarbonisation levers, \u00a314.2m committed capex, and Board-level governance with executive remuneration linked to targets \u2014 satisfying all criteria for a score of 3."
     },
     {
       "dimension_id": 2,
       "dimension_name": "Scope 1 & 2 emissions disclosure",
       "score": 3,
-      "evidence_quote": "Scope 1 (fuel, fleet, refrigerants)\u20262,440 [tCO2e]; Scope 2 location-based\u20264,025; Scope 2 market-based\u2026780",
-      "evidence_location": "p.4",
+      "evidence_quote": "Scope 1 (fuel, fleet, refrigerants)...2,440 [tCO2e 2024]; Scope 2 location-based 4,025; Scope 2 market-based 780. YoY change (market-based) -8.9%",
+      "evidence_location": "p.4, Section 2",
       "confidence": "high",
-      "scoring_rationale": "Both Scope 1 and Scope 2 (location-based and market-based) are disclosed in absolute tCO2e with a four-year time series (2019, 2022, 2023, 2024) including year-on-year percentage changes, and the data is covered by third-party limited assurance from Brackenbury Verification Services Ltd under ISAE 3000/3410."
+      "scoring_rationale": "Both Scope 1 and Scope 2 (location-based and market-based) are disclosed in absolute tCO2e with a four-year time series (2019, 2022, 2023, 2024) including year-on-year percentage changes, and the data has been subject to third-party limited assurance under ISAE 3000/3410 \u2014 meeting all criteria for a score of 3."
     },
     {
       "dimension_id": 3,
       "dimension_name": "Scope 3 emissions disclosure",
-      "score": 3,
-      "evidence_quote": "We disclose Scope 3 emissions across all categories deemed material\u20267 are reported as material\u2026Total material Scope 3 58,800 tCO2e",
-      "evidence_location": "p.5",
+      "score": 2,
+      "evidence_quote": "We disclose Scope 3 emissions across all categories deemed material...7 are reported as material...Total material Scope 3 58,800 tCO2e...methodology in Appendix B.",
+      "evidence_location": "p.5, Section 3",
       "confidence": "high",
-      "scoring_rationale": "Seven material Scope 3 categories are quantified in tCO2e with calculation methodologies documented per category; a materiality assessment methodology is referenced (Appendix B), and selected Scope 3 categories (1, 4, 6, 9) are independently assured under ISAE 3000/3410, meeting the criteria for comprehensive disclosure with methodology and third-party assurance."
+      "scoring_rationale": "Seven material Scope 3 categories are quantified in tCO2e with calculation methodologies stated per category, a refreshed materiality assessment with Appendix B methodology note, and limited assurance covering Categories 1, 4, 6, and 9 \u2014 meeting the criteria for a score of 3. [Second-pass correction: 3\u21922; scope3_reducing=False]"
     },
     {
       "dimension_id": 4,
       "dimension_name": "Third-party verification and assurance",
       "score": 2,
-      "evidence_quote": "Limited assurance by Brackenbury Verification Services Ltd\u2026in accordance with ISAE 3000 (Revised) and ISAE 3410\u2026full assurance statement published",
-      "evidence_location": "p.6",
+      "evidence_quote": "Limited assurance by Brackenbury Verification Services Ltd...in accordance with ISAE 3000 (Revised) and ISAE 3410...covers approximately 84% of our reported total emissions footprint.",
+      "evidence_location": "p.6, Section 4",
       "confidence": "high",
-      "scoring_rationale": "A named third-party assurer (Brackenbury Verification Services Ltd) has provided limited assurance to named standards (ISAE 3000 Revised and ISAE 3410), with the assurance statement published separately. This meets the score 2 criteria; however, the engagement is limited assurance rather than reasonable assurance, so score 3 is not yet warranted \u2014 the document itself notes reasonable assurance is targeted for 2026."
+      "scoring_rationale": "A named third-party assurer (Brackenbury Verification Services Ltd) has provided limited assurance to named standards (ISAE 3000 Revised and ISAE 3410) with a published assurance statement, covering 84% of emissions; however, as this is limited (not reasonable) assurance, the score is capped at 2 per the rubric."
     },
     {
       "dimension_id": 5,
       "dimension_name": "Science-based targets validation",
       "score": 3,
-      "evidence_quote": "targets are validated by the Science Based Targets initiative against the Corporate Net-Zero Standard (near-term, validated November 2023)",
-      "evidence_location": "p.3",
+      "evidence_quote": "Net Zero by 2045 commitment, validated against the Science Based Targets initiative (SBTi) Corporate Net-Zero Standard for near-term targets...validated November 2023.",
+      "evidence_location": "p.2\u20133, Section 1.1",
       "confidence": "high",
-      "scoring_rationale": "Near-term targets have been formally validated by SBTi against the Corporate Net-Zero Standard (November 2023), and quantified progress against those targets is reported in Section 5. Long-term target validation is noted as in progress, but the confirmed near-term validation with reported progress is sufficient for score 3."
+      "scoring_rationale": "Near-term targets have been formally validated by SBTi (November 2023) against the Corporate Net-Zero Standard, and quantified progress against those targets is reported in Section 5; long-term validation is in progress, but confirmed near-term validation with progress reporting satisfies a score of 3."
     }
   ]
 }

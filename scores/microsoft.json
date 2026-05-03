@@ -4,59 +4,59 @@
   "document_filename": "2025-Microsoft-Environmental-Sustainability-Report.pdf",
   "document_type": "sustainability_report",
   "reporting_period": "FY2024",
-  "total_score": 12,
+  "total_score": 9,
   "max_score": 15,
   "scorer": "claude-sonnet-4-6",
   "scoring_date": "2026-05-02",
   "rubric_version": "1.0",
   "schema_version": "1.0",
   "evidence_quality_flag": "strong",
-  "overall_notes": "Microsoft's 2025 Environmental Sustainability Report (covering FY2024) is a comprehensive and detailed disclosure with strong evidence across carbon, water, waste, and ecosystem dimensions. Scope 1, 2, and 3 emissions are quantified with multi-year trend data and independently reviewed by Deloitte & Touche LLP, and the net-zero/carbon-negative commitment is underpinned by specific 2030 milestones, a named decarbonisation pathway, and board-level governance. The principal gap is the absence of SBTi-validated or SBTi-committed targets for Microsoft's own operations, which is a notable omission given the maturity of the rest of the disclosure.",
+  "overall_notes": "Microsoft's 2025 Environmental Sustainability Report (covering FY2024) is a comprehensive, data-rich disclosure covering carbon, water, waste, and ecosystems commitments, with quantified multi-year progress against 2030 targets and granular Scope 1, 2, and 3 emissions breakdowns. Third-party limited review by Deloitte & Touche LLP adds credibility to the data, though the assurance scope and standard are not explicitly named in the narrative report. The single notable gap is the absence of SBTi-validated targets; Microsoft's reduction ambitions are internally defined rather than externally validated against a 1.5 \u00b0C pathway.",
   "scores": [
     {
       "dimension_id": 1,
       "dimension_name": "Net Zero commitment and transition plan",
       "score": 3,
       "evidence_quote": "By 2030, Microsoft will cut its emissions by more than half compared to 2020 and remove more carbon than it emits.",
-      "evidence_location": "p.11 (Our targets and progress)",
+      "evidence_location": "p.11 (Our targets and progress) and p.10 (Microsoft Climate Council)",
       "confidence": "high",
-      "scoring_rationale": "Microsoft states a specific carbon-negative target by 2030 with quantified interim milestones (>50% emission reduction from 2020 baseline, 100% CFE by 2025), a named decarbonisation pathway (CFE procurement, carbon removal, supplier engagement), and board-level governance via the Environmental, Social, and Public Policy Committee and the internal Climate Council with cross-company representation."
+      "scoring_rationale": "Microsoft states a specific net zero (carbon negative) target by 2030 with quantified interim milestones (>50% emissions reduction vs 2020 baseline, 100% CFE by 2025, carbon removal targets by 2030 and 2050). A named governance body\u2014the Microsoft Climate Council\u2014provides board-adjacent accountability, and a credible decarbonisation pathway covering Scope 1, 2, and 3 is detailed across efficiency, availability, and measurement workstreams."
     },
     {
       "dimension_id": 2,
       "dimension_name": "Scope 1 & 2 emissions disclosure",
-      "score": 3,
-      "evidence_quote": "Our Scope 1 and 2 emissions decreased by 30% from the 2020 base year... driven by our ongoing work to advance clean energy procurement.",
-      "evidence_location": "p.11 (Our targets and progress)",
+      "score": 1,
+      "evidence_quote": "Our Scope 1 and 2 emissions decreased by 30% from the 2020 base year\u2026driven by clean energy procurement, green tariff programs.",
+      "evidence_location": "p.11 (Our targets and progress \u2014 Scope 1 and 2 emissions)",
       "confidence": "high",
-      "scoring_rationale": "Quantified Scope 1 and Scope 2 (market-based) emissions are disclosed with year-on-year comparison across FY20\u2013FY24 (Carbon Table 1, p.12), a 29.9%/30% reduction from the 2020 baseline is reported, and Deloitte & Touche LLP performed a review of specified information in the Environmental Data Fact Sheet, constituting third-party assurance."
+      "scoring_rationale": "The report discloses both Scope 1 and Scope 2 (market-based) emissions with year-on-year directional comparison against a 2020 baseline, and quantified absolute figures are published in the accompanying Environmental Data Fact Sheet. Deloitte & Touche LLP performed a third-party review of specified information in Section 1 of that Fact Sheet, satisfying the assurance criterion for a score of 3. [Second-pass correction: 3\u21921; reduction_trend=False, both_scope2_types=False]"
     },
     {
       "dimension_id": 3,
       "dimension_name": "Scope 3 emissions disclosure",
-      "score": 3,
-      "evidence_quote": "Microsoft's Scope 3 emissions continue to account for more than 97% of our total emissions... increased by 26% from our 2020 baseline.",
-      "evidence_location": "p.13 (Carbon Table 2)",
+      "score": 2,
+      "evidence_quote": "Scope 3 emissions continue to account for more than 97% of our total emissions\u2026broken down by source [14 categories shown].",
+      "evidence_location": "p.13 (Carbon Table 2 \u2014 Breaking down our FY24 Scope 3 emissions by source)",
       "confidence": "high",
-      "scoring_rationale": "Scope 3 emissions are disclosed across 11 named GHG Protocol categories with percentage breakdowns and absolute figures (Carbon Table 2, p.13), a methodology note references management's criteria and the GHG Protocol, and Deloitte & Touche LLP's review of the Environmental Data Fact Sheet covers this data."
+      "scoring_rationale": "Microsoft discloses quantified Scope 3 emissions across all material GHG Protocol categories with percentage breakdowns (e.g. Category 1 Purchased Goods 34.04%, Category 2 Capital Goods 40.83%, Category 11 Use of Sold Products 11.83%), a methodology note referencing management's criteria, and a 26% increase vs 2020 baseline. Third-party review by Deloitte & Touche LLP covers the Environmental Data Fact Sheet where the underlying figures reside, meeting the comprehensive disclosure and assurance threshold. [Second-pass correction: 3\u21922; scope3_reducing=False]"
     },
     {
       "dimension_id": 4,
       "dimension_name": "Third-party verification and assurance",
       "score": 2,
       "evidence_quote": "Deloitte & Touche LLP performed a review relating to specified information within Section 1 of the Environmental Data Fact Sheet.",
-      "evidence_location": "p.2 (Reporting disclosure)",
+      "evidence_location": "p.2 (Reporting disclosure) and Appendix A, p.88",
       "confidence": "high",
-      "scoring_rationale": "A named third party (Deloitte & Touche LLP) performed external assurance of GHG and environmental data; however, the engagement is described as a 'review' of 'specified information' rather than full reasonable assurance to a named standard such as ISAE 3000, and the assurance statement itself is published in the separate Data Fact Sheet rather than within this report, limiting the score to 2."
+      "scoring_rationale": "A named third party (Deloitte & Touche LLP) conducted an external review of GHG and environmental data in the Environmental Data Fact Sheet; however, the report characterises this as a 'review' of 'specified information' rather than a full reasonable-assurance engagement to a named standard (e.g. ISAE 3000 or ISO 14064-3), and no separate assurance statement is reproduced within the document. This is consistent with limited rather than reasonable assurance, warranting a score of 2."
     },
     {
       "dimension_id": 5,
       "dimension_name": "Science-based targets validation",
       "score": 1,
-      "evidence_quote": "streamlined decision-making and alignment to science-based targets",
-      "evidence_location": "p.59 (Microsoft for Sustainability \u2014 Envirotainer case study)",
-      "confidence": "low",
-      "scoring_rationale": "The document does not disclose that Microsoft itself has signed an SBTi commitment letter, submitted targets for SBTi validation, or received SBTi-validated targets; the sole reference to 'science-based targets' appears in a customer case study, not in relation to Microsoft's own targets, so only an aspirational/indirect signal is present at best."
+      "evidence_quote": "By 2030, we will reduce our Scope 3 emissions by more than half from a 2020 baseline\u2026aligned with our 2030 carbon negative commitment.",
+      "evidence_location": "p.11 (Our targets and progress) and p.59 (Envirotainer \u2014 'alignment to science-based targets')",
+      "confidence": "medium",
+      "scoring_rationale": "The report does not mention SBTi, a commitment letter, or validation of science-based targets; the reduction targets (>50% Scope 1&2 and Scope 3 by 2030 vs 2020) are internally set and described as aligned with the company's own carbon-negative commitment rather than validated by the Science Based Targets initiative. A customer case study (Envirotainer) references SBTi alignment, but this relates to the customer, not Microsoft itself, warranting only a score of 1."
     }
   ]
 }

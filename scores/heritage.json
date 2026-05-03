@@ -11,7 +11,7 @@
   "rubric_version": "1.0",
   "schema_version": "1.0",
   "evidence_quality_flag": "weak",
-  "overall_notes": "This is a very brief web statement containing only high-level, aspirational sustainability language with no quantified data, targets, timelines, or third-party validation of any kind. The disclosure is limited to general commitments and operational practices, falling well short of recognised reporting standards such as GHG Protocol or GRI. Significant improvements across all five dimensions would be required for this vendor to meet a meaningful sustainability disclosure threshold.",
+  "overall_notes": "This is a brief web statement containing only high-level, aspirational sustainability language with no quantified data, targets, timelines, or third-party assurance of any kind. The disclosure is limited to operational initiatives (recycling, energy-efficient lighting) and broad commitments, falling well short of credible climate reporting standards. Significant improvements across all five dimensions would be required to meet basic transparency expectations.",
   "scores": [
     {
       "dimension_id": 1,
@@ -20,7 +20,7 @@
       "evidence_quote": "We are committed to reducing our environmental impact and to operating in a sustainable manner.",
       "evidence_location": "Our Environmental Commitment section",
       "confidence": "high",
-      "scoring_rationale": "The document expresses a general climate and sustainability ambition but provides no net zero or carbon neutral target, no specific year, and no transition plan or milestones."
+      "scoring_rationale": "The document expresses a general climate ambition and mentions supporting 'the transition to a low-carbon economy', but no net zero target, specific year, or transition pathway is stated."
     },
     {
       "dimension_id": 2,
@@ -29,7 +29,7 @@
       "evidence_quote": "No evidence found",
       "evidence_location": "N/A",
       "confidence": "high",
-      "scoring_rationale": "No Scope 1 or Scope 2 emissions figures of any kind are disclosed anywhere in the document; energy efficiency is mentioned only as a practice, not with quantified data."
+      "scoring_rationale": "No Scope 1 or Scope 2 emissions figures are disclosed anywhere in the document \u2014 not even qualitatively measured."
     },
     {
       "dimension_id": 3,
@@ -38,7 +38,7 @@
       "evidence_quote": "No evidence found",
       "evidence_location": "N/A",
       "confidence": "high",
-      "scoring_rationale": "There is no reference to Scope 3 emissions, value chain emissions, or supply chain carbon impacts anywhere in the document."
+      "scoring_rationale": "Scope 3 or value chain emissions are not mentioned at all in the document."
     },
     {
       "dimension_id": 4,
@@ -47,7 +47,7 @@
       "evidence_quote": "No evidence found",
       "evidence_location": "N/A",
       "confidence": "high",
-      "scoring_rationale": "No mention of any external verification, assurance, audit, or certification of sustainability or emissions data is made anywhere in the document."
+      "scoring_rationale": "No reference to any external verification, assurance, audit, or named third party is made anywhere in the document."
     },
     {
       "dimension_id": 5,
@@ -56,7 +56,7 @@
       "evidence_quote": "No evidence found",
       "evidence_location": "N/A",
       "confidence": "high",
-      "scoring_rationale": "Science-based targets, SBTi, and 1.5 \u00b0C alignment are not mentioned or alluded to anywhere in the document."
+      "scoring_rationale": "Science-based targets, SBTi, or 1.5\u00b0C alignment are not referenced anywhere in the document."
     }
   ]
 }
